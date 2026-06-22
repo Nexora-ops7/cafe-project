@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cafe Potterhead</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+<nav>
+
+<div class="logo">
+Cafe Potterhead
+</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#order">Order</a></li>
+<li><a href="#booking">Book Table</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+<div class="hero-content">
+
+<h1>A Magical Café Experience</h1>
+
+<p>
+Step into a world of magic, butter beer,
+wizard drinks and unforgettable memories.
+</p>
+
+<a href="#menu" class="btn">
+Explore Menu
+</a>
+
+<a href="#order" class="btn order-btn">
+⚡ Order From Table
+</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About Cafe Potterhead</h2>
+
+<p>
+Inspired by the magical world of wizardry,
+Cafe Potterhead combines enchanting ambience,
+creative drinks and themed food to create a
+unique experience for every visitor.
+</p>
+
+</section>
+
+<!-- MENU -->
+
+<section id="menu">
+
+<h2>Featured Magical Menu</h2>
+
+<div class="menu-grid">
+
+<div class="card">
+<h3>Cafe's Special Butter Beer</h3>
+<p>₹169</p>
+</div>
+
+<div class="card">
+<h3>Magical Colour Shift Lemonade</h3>
+<p>₹149</p>
+</div>
+
+<div class="card">
+<h3>Frothy Owl Cappuccino</h3>
+<p>₹149</p>
+</div>
+
+<div class="card">
+<h3>Firebolt Fries</h3>
+<p>₹129</p>
+</div>
+
+<div class="card">
+<h3>Hogwarts Special Combo</h3>
+<p>₹299</p>
+</div>
+
+<div class="card">
+<h3>Wizard's Cheesy Peri Fries</h3>
+<p>₹149</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2>Wizard Gallery</h2>
+
+<div class="gallery">
+
+<img src="butter beer.jpg" alt="">
+<img src="color shift lemonade.jpg" alt="">
+<img src="frothy owl.webp" alt="">
+<img src="firebolt fries.jpg" alt="">
+<img src="combo.jpg" alt="">
+<img src="preei fries.jpg" alt="">
+
+</div>
+
+</section>
+
+<!-- ORDER FROM TABLE -->
+
+<section id="order" class="wizard-order">
+
+<h2>⚡ Order From Your Table</h2>
+
+<p class="order-text">
+No need to call a wizard waiter.
+Select your magical treats and send your order directly.
+</p>
+
+<input
+type="number"
+id="tableNo"
+placeholder="Enter Table Number">
+
+<div class="order-list">
+
+<div class="order-item">
+
+<div>
+<h3>Butter Beer</h3>
+<p>₹169</p>
+</div>
+
+<div class="qty-controls">
+<button onclick="changeQty('butterbeer',-1)">−</button>
+<span id="butterbeer-qty">0</span>
+<button onclick="changeQty('butterbeer',1)">+</button>
+</div>
+
+</div>
+
+<div class="order-item">
+
+<div>
+<h3>Colour Shift Lemonade</h3>
+<p>₹149</p>
+</div>
+
+<div class="qty-controls">
+<button onclick="changeQty('lemonade',-1)">−</button>
+<span id="lemonade-qty">0</span>
+<button onclick="changeQty('lemonade',1)">+</button>
+</div>
+
+</div>
+
+<div class="order-item">
+
+<div>
+<h3>Frothy Owl Cappuccino</h3>
+<p>₹149</p>
+</div>
+
+<div class="qty-controls">
+<button onclick="changeQty('cappuccino',-1)">−</button>
+<span id="cappuccino-qty">0</span>
+<button onclick="changeQty('cappuccino',1)">+</button>
+</div>
+
+</div>
+
+<div class="order-item">
+
+<div>
+<h3>Firebolt Fries</h3>
+<p>₹129</p>
+</div>
+
+<div class="qty-controls">
+<button onclick="changeQty('fries',-1)">−</button>
+<span id="fries-qty">0</span>
+<button onclick="changeQty('fries',1)">+</button>
+</div>
+
+</div>
+
+<div class="order-item">
+
+<div>
+<h3>Hogwarts Special Combo</h3>
+<p>₹299</p>
+</div>
+
+<div class="qty-controls">
+<button onclick="changeQty('combo',-1)">−</button>
+<span id="combo-qty">0</span>
+<button onclick="changeQty('combo',1)">+</button>
+</div>
+
+</div>
+
+<div class="order-item">
+
+<div>
+<h3>Wizard's Cheesy Peri Fries</h3>
+<p>₹149</p>
+</div>
+
+<div class="qty-controls">
+<button onclick="changeQty('peri',-1)">−</button>
+<span id="peri-qty">0</span>
+<button onclick="changeQty('peri',1)">+</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="order-summary">
+
+<h3>
+Order Summary
+</h3>
+
+<div id="summaryItems">
+No items selected
+</div>
+
+<h2>
+Total: ₹<span id="total">0</span>
+</h2>
+
+<button onclick="placeOrder()">
+⚡ Send Order To Wizard Staff
+</button>
+
+</div>
+
+</section>
+
+<!-- BOOKING -->
+
+<section id="booking">
+
+<h2>Book Your Table</h2>
+
+<form id="bookingForm">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+type="date"
+id="date"
+required>
+
+<input
+type="number"
+id="people"
+placeholder="Number of Guests"
+required>
+
+<button type="submit">
+Reserve Through WhatsApp
+</button>
+
+</form>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Visit Us</h2>
+
+<p>
+<strong>Address:</strong><br>
+Shop No. 6, Citi Arcade CHS,<br>
+Sector 5, Koparkhairane,<br>
+Navi Mumbai, Maharashtra<br>
+Near Lokmanya Tilak College of Engineering
+</p>
+
+<div class="map-container">
+
+<iframe
+src="https://maps.google.com/maps?q=19.1050995,73.0068122&z=17&output=embed"
+width="100%"
+height="350"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+<a
+href="https://maps.app.goo.gl/Y2yNDyqJwPG6yRNNA"
+target="_blank"
+class="btn">
+📍 Open in Google Maps
+</a>
+
+<div class="contact-buttons">
+
+<a href="https://instagram.com/cafepotterhead"
+target="_blank"
+class="instagram">
+Instagram
+</a>
+
+<a href="https://wa.me/917039624494"
+target="_blank"
+class="whatsapp-link">
+WhatsApp
+</a>
+
+<a href="tel:+917039624494"
+class="phone-link">
+📞 CALL NOW
+</a>
+
+</div>
+
+</section>
+
+<!-- MAGIC ALERT -->
+
+<div id="magicAlert" class="magic-alert">
+
+<div class="magic-box">
+
+<h3>⚡ Accio Table Number!</h3>
+
+<p id="alertText">
+Please enter your table number before placing an order.
+</p>
+
+<button onclick="closeAlert()">
+Got It
+</button>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>Cafe Potterhead</h3>
+
+<p>
+Where Every Sip Feels Like Magic
+</p>
+
+<p class="credit">
+© 2026 Cafe Potterhead and All Rights Reserved.
+<br>
+Website Designed by Prajakta
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
